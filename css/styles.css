@@ -1,0 +1,31 @@
+body {
+    display: 0 auto;
+}
+.gallery {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    
+}
+
+.gallery-item {
+width: calc((100% - 32px) / 3);
+box-sizing: border-box;
+  
+}
+.gallery-link {
+
+}
+
+.gallery-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    
+    border-radius: 3px;
+    
+}
