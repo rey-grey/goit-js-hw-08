@@ -64,7 +64,7 @@ const images = [
   },
 ];
 
-const galleryList = document.querySelector('.gallery');  
+const galleryList = document.querySelector('.gallery');
 images.forEach(image => {
   const li = document.createElement('li');
   const link = document.createElement('a');
@@ -79,17 +79,15 @@ images.forEach(image => {
   li.classList.add('gallery-item');
   link.classList.add('gallery-link');
   img.classList.add('gallery-image');
-  galleryList.addEventListener('click', function (event) {
-    event.preventDefault();
-    const clickedImage = event.target;
-    if (clickedImage.nodeName !== 'IMG') return;
-    const bigImgSrc = clickedImage.dataset.source;
-    
-    const instance = basicLightbox.create(`<img src="${bigImgSrc}" width="800" height="600">`);
-    instance.show();
-  });
-})
-
+});
+galleryList.addEventListener('click', function (event) {
+  event.preventDefault();
+  const clickedImage = event.target;
+  if (clickedImage.nodeName !== 'IMG') return;
+  const bigImgSrc = clickedImage.dataset.source;
+  const instance = basicLightbox.create(`<img src="${bigImgSrc}" width="800" height="600">`);
+  instance.show();
+});
 
 
 
